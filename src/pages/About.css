@@ -1,0 +1,135 @@
+.about-page {
+  padding-top: 80px;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.about-container h1 {
+  text-align: center;
+  color: #000000;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.about-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #ffd700;
+}
+
+.about-section {
+  margin-bottom: 4rem;
+}
+
+.about-section h2 {
+  color: #000000;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-section p {
+  color: #333333;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.value-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-card h3 {
+  color: #000000;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 1rem;
+  display: inline-block;
+}
+
+.value-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #ffd700;
+}
+
+.value-card p {
+  color: #666666;
+  line-height: 1.6;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Media queries */
+@media (max-width: 480px) {
+  .about-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .value-card {
+    padding: 1.5rem;
+  }
+
+  .value-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
