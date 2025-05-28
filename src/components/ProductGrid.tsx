@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
-import { Link } from 'react-router-dom';
 import './ProductGrid.css';
 
 interface Product {
